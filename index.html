@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light" />
+    <title>Re:Quran – Starting Life with Guidance</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Press+Start+2P&family=Pixelify+Sans:wght@500;700&family=Homemade+Apple&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="bar">
+      <div class="wrap">
+        <a href="#" aria-label="Re:Quran"
+          ><img
+            src="assets/images/logo.png"
+            alt="Re:Quran – Starting Life with Guidance"
+        /></a>
+        <nav class="nav" aria-label="Menu">
+          <a href="#tentang">Tentang</a><a href="#kalendar">Kalendar</a
+          ><a href="#game">Main</a><a href="#buletin">Buletin</a
+          ><a href="#confession">Confession</a>
+        </nav>
+      </div>
+    </header>
+
+    <div id="b1"></div>
+
+    <section id="tentang" class="w">
+      <div class="wrap intro">
+        <h2>Bawa <span class="pill">Al-Quran</span> kembali ke kampus</h2>
+        <p>
+          Re:Quran ialah gerakan pelajar untuk menghidupkan kampus kita dengan
+          Al-Quran. Bukan sekadar di surau, tetapi dalam setiap kuliah, setiap
+          sesi study lewat malam dan setiap persahabatan yang kita bina.
+        </p>
+        <p>
+          Ini bukan sekadar acara. Ini gerakan pelajar yang saling mengajak dan
+          saling menguatkan. Sertai kami dari 9 November hingga 20 Disember 2026
+          dan bawa seorang kawan.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="targets">
+          <figure class="pol">
+            <img
+              src="assets/images/polaroid-kafe.jpg"
+              alt="Kat kafe"
+            />
+            <figcaption>#UM_Re:Quran</figcaption>
+          </figure>
+          <figure class="pol">
+            <img
+              src="assets/images/polaroid-tasik.jpg"
+              alt="Tepi tasik"
+            />
+            <figcaption>#UM_Re:Quran</figcaption>
+          </figure>
+          <figure class="pol">
+            <img
+              src="assets/images/polaroid-bus-stop.jpg"
+              alt="Bus stop"
+            />
+            <figcaption>#UM_Re:Quran</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="kalendar" class="w">
+      <div class="wrap">
+        <div class="box">
+          <h2>Perancang semester</h2>
+          <div class="months" id="months"></div>
+          <div class="legend">
+            <span
+              ><i style="background: #fff"></i>Hari Re:Quran (9 Nov – 20
+              Dis)</span
+            ><span><i style="background: #eef0f6"></i>Bukan hari kempen</span
+            ><span
+              ><img
+                id="wileg"
+                alt=""
+                style="
+                  width: 22px;
+                  height: 22px;
+                  vertical-align: -6px;
+                  margin-right: 5px;
+                "
+              />Weekenjoy</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="game">
+      <div class="wrap">
+        <div class="box" style="text-align: center">
+          <h2>Mengumpul Nur Petunjuk</h2>
+          <p style="margin: 0 auto; max-width: 52ch; color: var(--muted)">
+            Lari merentasi kampus: elak halangan dan kutip bintang nur. Tak
+            perlu log masuk, terus main!
+          </p>
+          <div class="arcade">
+            <div class="hud">
+              <span>Nur <b id="gs">0</b></span
+              ><span>Jarak <b id="gd">0m</b></span
+              ><span>Rekod <b id="gb">0</b></span>
+            </div>
+            <div class="stage">
+              <canvas
+                id="gc"
+                width="180"
+                height="270"
+                role="img"
+                aria-label="Permainan pixel tiga lorong: tukar lorong, lompat dan guling untuk mengelak halangan serta kutip bintang"
+              ></canvas>
+              <div class="ov" id="gov">
+                <p id="gmsg">Kutip bintang nur<br />dan elak halangan.</p>
+                <button class="btn sm" id="gbtn" type="button">
+                  Mula main
+                </button>
+              </div>
+            </div>
+            <p class="hint">
+              Kiri/kanan: tukar lorong. Atas: lompat. Bawah: guling. Atau leret
+              skrin.
+            </p>
+            <div class="pad">
+              <button type="button" data-k="L">KIRI</button
+              ><button type="button" data-k="U">LOMPAT</button
+              ><button type="button" data-k="D">GULING</button
+              ><button type="button" data-k="R">KANAN</button>
+            </div>
+          </div>
+          <div class="gpanel" id="gpanel" hidden>
+            <p>
+              Mata anda: <b id="gpts">0</b>. Masukkan nama untuk simpan rekod:
+            </p>
+            <div class="row">
+              <input
+                id="gname"
+                maxlength="16"
+                placeholder="Nama anda"
+                autocomplete="nickname"
+                aria-label="Nama anda"
+              /><button class="btn sm" id="gsv" type="button">Simpan</button>
+            </div>
+            <div id="gshare" hidden>
+              <p>
+                <b>Kongsi guna butang ini untuk tambah mata anda!</b> Setiap
+                kawan yang buka pautan anda beri +25 mata.
+              </p>
+              <input
+                id="glink"
+                readonly
+                aria-label="Pautan kongsi anda"
+              /><button class="btn sm" id="gshb" type="button">
+                Kongsi pautan
+              </button>
+            </div>
+            <small id="gnote" aria-live="polite"></small>
+          </div>
+        </div>
+        <div class="box rank">
+          <h3>Ranking</h3>
+          <ol id="glist"></ol>
+          <p id="gstat"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="buletin" class="w">
+      <div class="wrap">
+        <h2>Buletin</h2>
+        <div class="bul">
+          <article class="box bc big">
+            <div class="ph"></div>
+            <div class="t">
+              <h3>Tajuk buletin utama</h3>
+              <p>
+                Ringkasan berita atau pengumuman terkini diletakkan di sini.
+              </p>
+            </div>
+          </article>
+          <article class="box bc">
+            <div class="ph"></div>
+            <div class="t"><h3>Tajuk buletin 2</h3></div>
+          </article>
+          <article class="box bc">
+            <div class="ph"></div>
+            <div class="t"><h3>Tajuk buletin 3</h3></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="follow">
+      <div class="wrap">
+        <h2>Ikuti lagi perkembangan kita</h2>
+        <div class="row">
+          <a class="btn" href="#">Web</a><a class="btn" href="#">IG</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="confession" class="w">
+      <div class="wrap">
+        <h2>Re:Quran Confession</h2>
+        <div class="conf">
+          <form class="box" id="cform">
+            <input
+              id="cname"
+              maxlength="20"
+              placeholder="Nama"
+              aria-label="Nama"
+              required
+            /><textarea
+              id="cmsg"
+              maxlength="280"
+              placeholder="Your thought…"
+              aria-label="Luahan anda"
+              required
+            ></textarea
+            ><button class="btn" type="submit">Hantar</button>
+          </form>
+          <div
+            id="clist"
+            tabindex="0"
+            aria-label="Senarai confession"
+            aria-live="polite"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <div id="b2"></div>
+    <div class="org"><b>Anjuran:</b> Re:Quran Movement</div>
+    <div class="powered">
+      Re:Quran powered by
+      <a
+        href="https://www.instagram.com/muassis.kl/"
+        target="_blank"
+        rel="noopener"
+        aria-label="Muassis.KL di Instagram"
+        ><img
+          src="assets/images/muassis-kl.png"
+          alt="Muassis Kuala Lumpur"
+          width="480"
+          height="238"
+        /><span>@muassis.kl</span></a
+      >
+    </div>
+    <footer>© 2026 Re:Quran Movement · Starting Life with Guidance</footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
