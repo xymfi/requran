@@ -9,7 +9,7 @@ var M = [
     ev: {
       13: ["Quran Story Night"],
       14: ["wi", "Spin the Frizbee"],
-      21: ["Mabit Syabab"],
+      21: ["Qiam Pemuda"],
       28: ["wi"],
     },
   },
@@ -204,6 +204,13 @@ var INFO = {
   "Spin the Frizbee": {
     poster: "spin-the-frizbee.jpg",
     lines: ["Court KK5 · 8.30 pagi"],
+  },
+  "Qiam Pemuda": {
+    poster: "qiam-pemuda.png",
+    lines: [
+      "Bersama Ziyad Ismail untuk sesi Qiam Pemuda",
+      "Masjid Jamek Sultan Abdul Aziz, Petaling Jaya · 20 Nov - 21 Nov",
+    ],
   },
 };
 function slug(s) {
